@@ -1,0 +1,12 @@
+flask
+flask-cors
+firebase-admin
+numpy
+pandas
+scikit-learn
+nltk
+transformers
+torch
+joblib
+gunicorn
+requests
