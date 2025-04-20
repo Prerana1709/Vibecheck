@@ -1,7 +1,5 @@
 flask
 flask-cors
-numpy
-pandas
 torch
 joblib
 gunicorn
@@ -9,6 +7,11 @@ requests
 google_generativeai
 gtts
 npm
+pymongo
+dotenv
+pygame
+speechrecognition
+BytesIO
 
 
 
