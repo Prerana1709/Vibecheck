@@ -11,7 +11,7 @@ pymongo
 dotenv
 pygame
 speechrecognition
-BytesIO
+bytesIO
 
 
 
