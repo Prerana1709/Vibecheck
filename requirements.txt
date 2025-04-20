@@ -4,7 +4,7 @@ torch
 joblib
 gunicorn
 requests
-google_generativeai
+google.generativeai
 gtts
 npm
 pymongo
