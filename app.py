@@ -8,9 +8,6 @@ from gtts import gTTS
 import speech_recognition as sr
 from io import BytesIO
 
-import os
-port = int(os.environ.get("PORT", 5000))
-app.run(host="0.0.0.0", port=port)
 
 # === Load .env ===
 load_dotenv()
