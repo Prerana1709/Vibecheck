@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  max-width: 400px;
+  margin: auto;
+  border: 2px solid #a0c4ff;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #dff7ff, #f1fbff);
+  box-shadow: 0 10px 25px rgba(93, 173, 236, 0.2);
+  font-family: 'Outfit', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Soft animated background blur */
+.chat-container::before {
+  content: '';
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle at 30% 30%, #a5d8ff, transparent 70%);
+  filter: blur(60px);
+  z-index: 0;
+}
+
+.chat-header {
+  background-color: #4dabf7;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.chat-box {
+  flex-grow: 1;
+  padding: 12px;
+  overflow-y: scroll;
+  height: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1;
+}
+
+/* Custom scrollbar */
+.chat-box::-webkit-scrollbar {
+  width: 5px;
+}
+.chat-box::-webkit-scrollbar-thumb {
+  background: #9acaff;
+  border-radius: 5px;
+}
+
+/* Message bubbles */
+.message {
+  padding: 10px 14px;
+  border-radius: 18px;
+  max-width: 75%;
+  font-size: 13px;
+  line-height: 1.3;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.message.user {
+  background-color: #cfefff;
+  color: #004466;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 0 8px rgba(173, 216, 255, 0.4);
+}
+
+.message.bot {
+  background-color: #e5f0ff;
+  color: #1e3a8a;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 0 8px rgba(173, 216, 255, 0.3);
+}
+
+/* Form styles */
+.message-form {
+  display: flex;
+  padding: 10px;
+  border-top: 2px solid #a0c4ff;
+  background-color: #e0f2ff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 1;
+}
+
+.message-form input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 13px;
+  border: 2px solid #c2e0ff;
+  border-radius: 24px;
+  background-color: #ffffff;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.message-form input:focus {
+  border-color: #4dabf7;
+  background-color: #f8fdff;
+}
+
+.message-form button {
+  background-color: #4dabf7;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  margin-left: 6px;
+  border-radius: 22px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.message-form button:hover {
+  background-color: #1e88e5;
+}
+
+.loading {
+  font-size: 13px;
+  color: #4dabf7;
+  text-align: center;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

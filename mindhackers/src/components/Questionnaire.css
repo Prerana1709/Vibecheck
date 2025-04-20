@@ -1,0 +1,50 @@
+.questionnaire {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+  }
+  
+  .questionnaire h2 {
+    color: #667eea;
+  }
+  
+  .question h3 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .option-btn {
+    padding: 10px;
+    background: #f0f4ff;
+    border: 1px solid #d0d8ff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .option-btn:hover {
+    background: #d0d8ff;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 5px;
+    background: #eee;
+    margin-top: 2rem;
+    border-radius: 5px;
+  }
+  
+  .progress {
+    height: 100%;
+    background: #667eea;
+    border-radius: 5px;
+    transition: width 0.3s;
+  }
